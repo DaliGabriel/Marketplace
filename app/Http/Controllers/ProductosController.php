@@ -52,6 +52,10 @@ class ProductosController extends Controller
             'precio' => 'required',
         ]);
 
+        if($request->hasFile('imagen')) {
+            $validated['imagen'] = $request->file('imagen')->store($validated['nombre'], 'public');
+        }
+
         //Insertar nueva tarea en la base de datos
         $request->user()->productos()->create($validated);        
 

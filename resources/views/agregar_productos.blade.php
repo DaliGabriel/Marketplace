@@ -33,7 +33,16 @@
                 step="any"
                 value="{{old('precio')}}"
                 />
-                <x-input-error :messages="$errors->get('precio')" class="mt-2" />    
+                <x-input-error :messages="$errors->get('precio')" class="mt-2" />   
+                    
+                    
+                    <x-input-label class="mt-4" for="precio" :value="__('Imagen')" />
+                        <input
+                            type="file"
+                            class="p-3 border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm"
+                            name="imagen"
+                        />
+                        <x-input-error :messages="$errors->get('imagen')" class="mt-2" />     
 
             </div>
 
