@@ -16,7 +16,7 @@ class ProductosController extends Controller
     {
         //
         return view('dashboard', [
-            'productos' => Productos::latest()->get()
+            'productos' => Productos::with('user')->latest()->get()
         ]);
     }
 

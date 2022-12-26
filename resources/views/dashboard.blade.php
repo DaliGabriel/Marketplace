@@ -29,7 +29,7 @@
                     <div class="mt-3">
                         <div class="flex ">
                             <img src="https://shreethemes.in/giglink/layouts/assets/images/items/1.jpg" class="rounded-full h-8 w-8" alt="">
-                            <a href="creator-profile.html" class="ml-2 text-[15px] font-medium text-slate-400 hover:text-violet-600 dark:text-white">@StreetBoy</a>
+                            <a href="creator-profile.html" class="ml-2 text-[15px] font-medium text-slate-400 hover:text-violet-600 dark:text-white">@ {{$producto->user->name}}</a>
                         </div>
 
                         <div class="flex mb-4">
