@@ -18,7 +18,7 @@
                         </div>
 
                         <div class="absolute -bottom-20 group-hover:bottom-1/2 group-hover:translate-y-1/2 right-0 left-0 mx-auto text-center transition-all duration-500">
-                            <a href="item-detail.html" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">Comprar</a>                                
+                            <a href="item-detail.html" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"><i class="fa-solid fa-sack-dollar"></i> Comprar</a>                                
                         </div>
 
                         <div class="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-all duration-500">
