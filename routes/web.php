@@ -16,7 +16,7 @@ use App\Http\Controllers\ProductosController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('dashboard');
 });
 
 Route::get('/agregar_productos', [ProductosController::class, 'agregar_productos'])->middleware(['auth', 'verified'])->name('agregar_productos');
