@@ -129,17 +129,17 @@ class ProductosController extends Controller
      * @param  \App\Models\Productos  $productos
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Productos $productos)
+    public function destroy(Productos $producto)
     {
-                //El usuario que quiere editar el post tiene que ser el dueño
-                if ($productos->user_id != auth()->id()){
-                    abort(403, 'Upss, parece que no tienes acceso');
-                }
-                
-                //Borrar la tarea en base al id
-                $productos->delete();
-         
-                //Redirigir al usuario a index
-                return redirect(route('tareas.index'))->with('message_delete', 'Tarea Eliminada con exito');
+        //El usuario que quiere editar el post tiene que ser el dueño
+        if ($producto->user_id != auth()->id()){
+            abort(403, 'Upss, parece que no tienes acceso');
+        }
+        
+        //Borrar la tarea en base al id
+        $producto->delete();
+ 
+        //Redirigir al usuario a index
+        return redirect(route('productos.index'))->with('message_delete', 'Producto Eliminado con exito');
     }
 }

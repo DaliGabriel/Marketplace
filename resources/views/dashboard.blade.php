@@ -4,7 +4,13 @@
             <div x-data="{ show: true }" x-show="show" x-init="setTimeout(() => show = false, 3000)" class="bg-blue-100 border border-blue-400 text-blue-700 px-8 py-3 rounded relative m-4" role="alert">
                 <span class="block sm:inline">{{ session()->get('message') }}</span>
             </div>
-        @endif
+    @endif
+
+    @if(session()->has('message_delete'))
+            <div x-data="{ show: true }" x-show="show" x-init="setTimeout(() => show = false, 3000)" class="bg-red-100 border border-red-400 text-red-700 px-8 py-3 rounded relative m-4 text-center" role="alert">
+                <span class="block sm:inline">{{ session()->get('message_delete') }}</span>
+            </div>
+    @endif
 
     <!-- Start -->
     <section class="relative md:py-24 py-16">
