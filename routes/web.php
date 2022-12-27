@@ -32,7 +32,7 @@ Route::get('/{productos}/edit',[ProductosController::class, 'edit'])->middleware
 Route::get('/dashboard', [ProductosController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::resource('productos', ProductosController::class)
-    ->only(['index', 'store', 'edit',])
+    ->only(['index', 'store', 'edit','update', 'destroy'])
     ->middleware(['auth', 'verified']);
 
 Route::middleware('auth')->group(function () {

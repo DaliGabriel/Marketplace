@@ -1,12 +1,39 @@
 <x-app-layout>
 
     <div class="grid lg:grid-cols-12 md:grid-cols-2 grid-cols-1 gap-[30px] mt-8">
+        
         <div class="lg:col-span-5 px-2">
             <img src="{{$producto->imagen ? asset('storage/' . $producto->imagen) : asset('images/no_imagen.png')}}" class="rounded-md shadow dark:shadow-gray-700" alt="">
 
         </div><!--end col-->
 
-        <div class="lg:col-span-7 lg:ml-8 max-w-lg rounded overflow-hidden shadow-lg px-2">
+        <div class="lg:col-span-7 lg:ml-8 max-w-lg rounded overflow-hidden shadow-lg px-2 relative">
+            <div class="absolute top-2 right-1">
+                @if ($producto->user->is(auth()->user()))
+            <x-dropdown >
+                <x-slot name="trigger">
+                    <button>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-gray-400" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z" />
+                        </svg>
+                    </button>
+                </x-slot>
+                <x-slot name="content">
+                    <x-dropdown-link :href="route('productos.edit', $producto)">
+                        {{ __('Editar') }}
+                    </x-dropdown-link>
+                    <form method="POST" action="{{ route('productos.destroy', $producto) }}">
+                        @csrf
+                        @method('delete')
+                        <x-dropdown-link :href="route('productos.destroy', $producto)" onclick="event.preventDefault(); this.closest('form').submit();">
+                            {{ __('Borrar') }}
+                        </x-dropdown-link>
+                    </form>
+                </x-slot>
+            </x-dropdown>
+            @endif 
+            </div>
+
             <h2 class="text-heading text-lg md:text-xl lg:text-2xl 2xl:text-3xl font-bold hover:text-black mb-3.5 mt-2">{{$producto->nombre}}</h2>
 
             <span class=" text-slate-400 block mt-2">Vendedor: <span class="text-violet-600">@<span>{{$producto->user->name}}</span></span></span>

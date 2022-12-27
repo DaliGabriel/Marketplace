@@ -47,8 +47,8 @@ class ProductosController extends Controller
     {
         //Guardar tarea en base de datos
         $validated = $request->validate([
-            'nombre' => 'required|string|max:55',
-            'descripcion' => 'required|string|max:55',
+            'nombre' => 'required|string|max:255',
+            'descripcion' => 'required|string|max:255',
             'precio' => 'required',
         ]);
 
@@ -86,7 +86,7 @@ class ProductosController extends Controller
     public function edit(Productos $productos)
     {
         //
-        return view('');
+        return view('editar_productos');
     }
 
     /**
@@ -109,6 +109,15 @@ class ProductosController extends Controller
      */
     public function destroy(Productos $productos)
     {
-        //
+                //El usuario que quiere editar el post tiene que ser el dueño
+                if ($productos->user_id != auth()->id()){
+                    abort(403, 'Upss, parece que no tienes acceso');
+                }
+                
+                //Borrar la tarea en base al id
+                $productos->delete();
+         
+                //Redirigir al usuario a index
+                return redirect(route('tareas.index'))->with('message_delete', 'Tarea Eliminada con exito');
     }
 }

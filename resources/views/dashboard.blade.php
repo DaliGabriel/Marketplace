@@ -20,10 +20,6 @@
                         <div class="absolute -bottom-20 group-hover:bottom-1/2 group-hover:translate-y-1/2 right-0 left-0 mx-auto text-center transition-all duration-500">
                             <a href="/producto/{{$producto->id}}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"><i class="fa-solid fa-sack-dollar"></i> Comprar</a>                                
                         </div>
-
-                        <div class="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-all duration-500">
-                            <a href="javascript:void(0)" class="btn btn-icon btn-sm rounded-full bg-violet-600 hover:bg-violet-700 border-violet-600 hover:border-violet-700 text-white"><i class="mdi mdi-plus"></i></a>
-                        </div>
                     </div>
 
                     <div class="mt-3">
@@ -33,7 +29,7 @@
 
                         <div class="flex mb-4">
                             <div class="m-auto">
-                                <a href="item-detail.html" class="font-semibold hover:text-violet-600 dark:text-white text-2xl">{{$producto->nombre}}</a>
+                                <a href="/producto/{{$producto->id}}" class="font-semibold hover:text-violet-600 dark:text-white text-2xl">{{$producto->nombre}}</a>
                             </div>
                             
                         </div>
