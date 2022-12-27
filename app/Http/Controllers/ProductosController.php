@@ -83,10 +83,12 @@ class ProductosController extends Controller
      * @param  \App\Models\Productos  $productos
      * @return \Illuminate\Http\Response
      */
-    public function edit(Productos $productos)
+    public function edit(Productos $producto)
     {
-        //
-        return view('editar_productos');
+        //Mostrar la vista editar con los modelos de la clase tarea
+        return view('editar_productos', [
+            'producto' => $producto,
+        ]);
     }
 
     /**
@@ -96,9 +98,29 @@ class ProductosController extends Controller
      * @param  \App\Models\Productos  $productos
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Productos $productos)
+    public function update(Request $request, Productos $producto)
     {
-        //
+        //Make suer logged in user is owner
+        if ($producto->user_id != auth()->id()){
+            abort(403, 'Upss, parece que no tienes acceso');
+        }
+
+        //Guardar tarea en base de datos
+        $validated = $request->validate([
+            'nombre' => 'required|string|max:255',
+            'descripcion' => 'required|string|max:255',
+            'precio' => 'required',
+        ]);
+
+
+        if($request->hasFile('imagen')) {
+            $validated['imagen'] = $request->file('imagen')->store('imagenes_productos', 'public');
+        }
+
+        $producto->update($validated);
+
+        //Redireccionar al usuario a index
+        return redirect(route('productos.index'))->with('message', 'Producto actualizado con exito');
     }
 
     /**

@@ -1,7 +1,8 @@
 <x-app-layout>
     <div class="max-w-2xl mx-auto p-4 sm:p-6 lg:p-8">
-        <form method="POST" action="{{ route('productos.store') }}" enctype="multipart/form-data">
+        <form method="POST" action="{{ route('productos.update', $producto) }}" enctype="multipart/form-data">
             @csrf
+            @method('PUT')
 
             <div>
                 <x-input-label for="nombre" :value="__('Nombre')" />
@@ -10,16 +11,31 @@
                 name="nombre"
                 required 
                 autocomplete="nombre"
-                value="{{old('nombre')}}"
+                value="{{old('nombre', $producto->nombre)}}"
                 />
                 <x-input-error :messages="$errors->get('nombre')" class="mt-2" />
 
                 <x-input-label class="mt-4" for="nombre" :value="__('Descripcion')" />
-                <x-text-area 
+
+                <textarea 
                 name="descripcion" 
                 style="resize: none;"
-                value="{{old('descripcion')}}"
-                />
+                class = "
+                    form-control
+                    block
+                    px-3
+                    w-full
+                    py-1.5
+                    border-gray-300 
+                    dark:border-gray-700 
+                    dark:bg-gray-900 
+                    dark:text-gray-300 
+                    focus:border-indigo-500 
+                    dark:focus:border-indigo-600 
+                    focus:ring-indigo-500 
+                    dark:focus:ring-indigo-600 
+                    rounded-md shadow-sm">{{$producto->descripcion}}</textarea>
+
                 <x-input-error :messages="$errors->get('descripcion')" class="mt-2" />
 
                 <x-input-label class="mt-4" for="precio" :value="__('Precio')" />
@@ -31,8 +47,14 @@
                 required autocomplete="precio"
                 min="1" 
                 step="any"
-                value="{{old('precio')}}"
+                value="{{old('nombre', $producto->precio)}}"
                 />
+
+                <img
+                class=" mb-6 mt-6"
+                src="{{$producto->imagen ? asset('storage/' . $producto->imagen) : asset('images/no_imagen.png')}}"
+                alt="imagen edicion"
+            />
                 <x-input-error :messages="$errors->get('precio')" class="mt-2" />   
                     
                     
@@ -49,16 +71,9 @@
 
                 <div class="flex justify-end mt-4">
                     <x-primary-button>
-                        {{ __('Confirm') }}
+                        {{ __('Actualizar') }}
                     </x-primary-button>
                 </div>
-
-                @if(session()->has('message'))
-                <div x-data="{ show: true }" x-show="show" x-init="setTimeout(() => show = false, 3000)" class="bg-blue-100 border border-blue-400 text-blue-700 px-8 py-3 rounded relative m-4" role="alert">
-                    <span class="block sm:inline">{{ session()->get('message') }}</span>
-                </div>
-                @endif
-
         </form>
     </div>
 </x-app-layout>

@@ -1,11 +1,16 @@
 <x-app-layout>
 
+    @if(session()->has('message'))
+            <div x-data="{ show: true }" x-show="show" x-init="setTimeout(() => show = false, 3000)" class="bg-blue-100 border border-blue-400 text-blue-700 px-8 py-3 rounded relative m-4" role="alert">
+                <span class="block sm:inline">{{ session()->get('message') }}</span>
+            </div>
+        @endif
 
     <!-- Start -->
     <section class="relative md:py-24 py-16">
         <div class="container">
             <div class="grid grid-cols-1 text-center">
-                <h3 class="md:text-[30px] text-[26px] font-semibold dark:text-white">Discover Items</h3>
+                <h3 class="md:text-[30px] text-[26px] font-semibold dark:text-white">Articulos</h3>
             </div><!--end grid-->
 
             
@@ -20,6 +25,7 @@
                         <div class="absolute -bottom-20 group-hover:bottom-1/2 group-hover:translate-y-1/2 right-0 left-0 mx-auto text-center transition-all duration-500">
                             <a href="/producto/{{$producto->id}}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"><i class="fa-solid fa-sack-dollar"></i> Comprar</a>                                
                         </div>
+
                     </div>
 
                     <div class="mt-3">
