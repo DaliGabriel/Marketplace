@@ -15,16 +15,24 @@ use App\Http\Controllers\ProductosController;
 |
 */
 
+//hacer el dashboard como la pagina por defecto al iniciar sesion
 Route::get('/', function () {
     return redirect('dashboard');
 });
 
+//Mostrar formulario para agregar productos
 Route::get('/agregar_productos', [ProductosController::class, 'agregar_productos'])->middleware(['auth', 'verified'])->name('agregar_productos');
+
+//Descripcion del producto
+Route::get('/producto/{productos}',[ProductosController::class, 'show'])->middleware(['auth', 'verified']);
+
+//Mostrar formulario para editar productos
+Route::get('/{productos}/edit',[ProductosController::class, 'edit'])->middleware(['auth', 'verified'])->name('editar_productos');
 
 Route::get('/dashboard', [ProductosController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::resource('productos', ProductosController::class)
-    ->only(['index', 'store'])
+    ->only(['index', 'store', 'edit',])
     ->middleware(['auth', 'verified']);
 
 Route::middleware('auth')->group(function () {

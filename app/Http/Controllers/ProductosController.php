@@ -72,6 +72,9 @@ class ProductosController extends Controller
     public function show(Productos $productos)
     {
         //
+        return view('mostrar_producto', [
+            'producto' => $productos
+        ]);
     }
 
     /**
@@ -83,6 +86,7 @@ class ProductosController extends Controller
     public function edit(Productos $productos)
     {
         //
+        return view('');
     }
 
     /**
