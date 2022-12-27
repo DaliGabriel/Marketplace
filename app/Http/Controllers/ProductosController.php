@@ -53,7 +53,7 @@ class ProductosController extends Controller
         ]);
 
         if($request->hasFile('imagen')) {
-            $validated['imagen'] = $request->file('imagen')->store($validated['nombre'], 'public');
+            $validated['imagen'] = $request->file('imagen')->store('imagenes_productos', 'public');
         }
 
         //Insertar nueva tarea en la base de datos

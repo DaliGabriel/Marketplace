@@ -13,6 +13,7 @@ class Productos extends Model
         'nombre',
         'descripcion',
         'precio',
+        'imagen'
     ];
 
     //Relacion con el usuario

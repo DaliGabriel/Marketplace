@@ -14,7 +14,7 @@
                 <div class="group relative overflow-hidden p-2 rounded-lg bg-white dark:bg-slate-900 border border-gray-100 dark:border-gray-800 hover:shadow-md dark:shadow-md hover:dark:shadow-gray-700 transition-all duration-500 hover:-mt-2 h-fit">
                     <div class="relative overflow-hidden">
                         <div class="relative overflow-hidden rounded-lg">
-                            <img src="https://shreethemes.in/giglink/layouts/assets/images/items/1.jpg" class="rounded-lg shadow-md dark:shadow-gray-700 group-hover:scale-110 transition-all duration-500" alt="">
+                            <img src="{{$producto->imagen ? asset('storage/' . $producto->imagen) : asset('images/no_imagen.png')}}" class="rounded-lg shadow-md dark:shadow-gray-700 group-hover:scale-110 transition-all duration-500" alt="Imagen producto">
                         </div>
 
                         <div class="absolute -bottom-20 group-hover:bottom-1/2 group-hover:translate-y-1/2 right-0 left-0 mx-auto text-center transition-all duration-500">
@@ -28,7 +28,6 @@
 
                     <div class="mt-3">
                         <div class="flex ">
-                            <img src="https://shreethemes.in/giglink/layouts/assets/images/items/1.jpg" class="rounded-full h-8 w-8" alt="">
                             <a href="creator-profile.html" class="ml-2 text-[15px] font-medium text-slate-400 hover:text-violet-600 dark:text-white">@<span>{{$producto->user->name}}</span></a>
                         </div>
 
