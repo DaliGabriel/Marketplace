@@ -14,7 +14,7 @@
                 <div class="group relative overflow-hidden p-2 rounded-lg bg-white dark:bg-slate-900 border border-gray-100 dark:border-gray-800 hover:shadow-md dark:shadow-md hover:dark:shadow-gray-700 transition-all duration-500 hover:-mt-2 h-fit">
                     <div class="relative overflow-hidden">
                         <div class="relative overflow-hidden rounded-lg">
-                            <img src="{{$producto->imagen ? asset('storage/' . $producto->imagen) : asset('images/no_imagen.png')}}" class="rounded-lg shadow-md dark:shadow-gray-700 group-hover:scale-110 transition-all duration-500" alt="Imagen producto">
+                            <img src="{{$producto->imagen ? asset('storage/' . $producto->imagen) : asset('images/no_imagen.png')}}" class="rounded-lg shadow-md dark:shadow-gray-700 group-hover:scale-110 transition-all duration-500 h-30" alt="Imagen producto">
                         </div>
 
                         <div class="absolute -bottom-20 group-hover:bottom-1/2 group-hover:translate-y-1/2 right-0 left-0 mx-auto text-center transition-all duration-500">
