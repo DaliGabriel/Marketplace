@@ -50,44 +50,45 @@
                 <div class="flex items-center mt-5"><div class="text-heading font-bold text-base md:text-xl lg:text-2xl 2xl:text-4xl pe-2 md:pe-0 lg:pe-2 2xl:pe-0 dark:text-white">${{number_format($producto->precio)}}</div></div>
             </div>
 
-
-            <button class="text-[13px] 
-            md:text-sm 
-            leading-4 
-            inline-flex 
-            items-center 
-            cursor-pointer 
-            transition 
-            ease-in-out 
-            duration-300 
-            font-semibold 
-            font-body 
-            text-center 
-            justify-center 
-            border-0 
-            border-transparent 
-            placeholder-white 
-            focus-visible:outline-none 
-            focus:outline-none 
-            rounded-md  
-            bg-black 
-            text-white 
-            px-5 
-            md:px-6 
-            lg:px-8 
-            py-4 
-            md:py-3.5 
-            lg:py-4 
-            hover:text-white 
-            hover:bg-gray-600 
-            hover:shadow-cart 
-            w-full 
-            h-10 
-            md:h-12
-            mt-4
-            mb-4
-            ">Comprar</button>
-
+            <a href="/checkout/{{$producto->id}}">
+                <button class="text-[13px] 
+                    md:text-sm 
+                    leading-4 
+                    inline-flex 
+                    items-center 
+                    cursor-pointer 
+                    transition 
+                    ease-in-out 
+                    duration-300 
+                    font-semibold 
+                    font-body 
+                    text-center 
+                    justify-center 
+                    border-0 
+                    border-transparent 
+                    placeholder-white 
+                    focus-visible:outline-none 
+                    focus:outline-none 
+                    rounded-md  
+                    bg-black 
+                    text-white 
+                    px-5 
+                    md:px-6 
+                    lg:px-8 
+                    py-4 
+                    md:py-3.5 
+                    lg:py-4 
+                    hover:text-white 
+                    hover:bg-gray-600 
+                    hover:shadow-cart 
+                    w-full 
+                    h-10 
+                    md:h-12
+                    mt-4
+                    mb-4">
+                    Comprar
+                </button>
+            </a>
         </div><!--end col-->
     </div>
 

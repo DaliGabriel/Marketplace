@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Productos;
+use App\Models\ordenes;
 use Illuminate\Http\Request;
 
 class ProductosController extends Controller
@@ -141,5 +142,45 @@ class ProductosController extends Controller
  
         //Redirigir al usuario a index
         return redirect(route('productos.index'))->with('message_delete', 'Producto Eliminado con exito');
+    }
+
+
+    /**
+     * Stripe checkout.
+    */
+    public function checkout(Productos $producto){
+        
+        $stripe = new \Stripe\StripeClient(env('STRIPE_SECRET_KEY'));
+
+        $checkout_session = $stripe->checkout->sessions->create([
+            'line_items' => [[
+              'price_data' => [
+                'currency' => 'usd',
+                'product_data' => [
+                  'name' => $producto->nombre,
+                ],
+                'unit_amount' => $producto->precio*100,
+              ],
+              'quantity' => 1,
+            ]],
+            'mode' => 'payment',
+            'success_url' => route('exito', true),
+            'cancel_url' => route('fallo', true),
+        ]);
+
+        
+        return redirect($checkout_session->url);
+
+        
+    }
+
+    public function exito(){
+
+        return redirect(route('productos.index'))->with('message', 'Producto Comprado con exito');
+
+    }
+
+    public function fallo(){
+        return redirect(route('productos.index'))->with('message_delete', 'No se pudo realizar la compra :(');
     }
 }

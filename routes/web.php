@@ -41,4 +41,9 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+//Descripcion del producto
+Route::get('/checkout/{producto}',[ProductosController::class, 'checkout'])->middleware(['auth', 'verified'])->name('checkout');
+Route::get('/exito',[ProductosController::class, 'exito'])->middleware(['auth', 'verified'])->name('exito');
+Route::get('/fallo',[ProductosController::class, 'fallo'])->middleware(['auth', 'verified'])->name('fallo');
+
 require __DIR__.'/auth.php';
