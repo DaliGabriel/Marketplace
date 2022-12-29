@@ -40,14 +40,14 @@
                 @endif 
             </div>
 
-            <h2 class="text-heading text-lg md:text-xl lg:text-2xl 2xl:text-3xl font-bold hover:text-black mb-3.5 mt-2">{{$producto->nombre}}</h2>
+            <h2 class="text-heading text-lg md:text-xl lg:text-2xl 2xl:text-3xl font-bold hover:text-black mb-3.5 mt-2 dark:text-white dark:hover:text-purple-200 ">{{$producto->nombre}}</h2>
 
-            <span class=" text-slate-400 block mt-2">Vendedor: <span class="text-violet-600">@<span>{{$producto->user->name}}</span></span></span>
+            <span class=" text-slate-400 block mt-2 dark:text-white">Vendedor: <span class="text-violet-600">@<span>{{$producto->user->name}}</span></span></span>
         
-            <p class="text-body text-sm lg:text-base leading-6 lg:leading-8">{{$producto->descripcion}}</p>
+            <p class="text-body text-sm lg:text-base leading-6 lg:leading-8 dark:text-white">{{$producto->descripcion}}</p>
         
             <div class="mt-4">
-                <div class="flex items-center mt-5"><div class="text-heading font-bold text-base md:text-xl lg:text-2xl 2xl:text-4xl pe-2 md:pe-0 lg:pe-2 2xl:pe-0">${{number_format($producto->precio)}}</div></div>
+                <div class="flex items-center mt-5"><div class="text-heading font-bold text-base md:text-xl lg:text-2xl 2xl:text-4xl pe-2 md:pe-0 lg:pe-2 2xl:pe-0 dark:text-white">${{number_format($producto->precio)}}</div></div>
             </div>
 
 
