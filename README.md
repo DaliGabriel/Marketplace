@@ -30,5 +30,10 @@
 </li>
 <br>
 
+<li>Agregar Producto<br>
+<img src="./readmeFiles/agregarProducto.PNG"alt="Login"/><br>Formulario para poder agrear el producto.
+</li>
+<br>
+
 <ul>
 
