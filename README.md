@@ -35,5 +35,11 @@
 </li>
 <br>
 
+<li>Editar y Borrar Producto<br>
+<img src="./readmeFiles/opcionEditarBorrar.PNG"alt="Login"/><br>
+<img src="./readmeFiles/editarProducto.PNG"alt="Login"/><br>Cuando eres el creador del producto podras editarlo y borrarlo, esta opcion sera un icono de tres puntos que podremos encontrar en ver producto.
+</li>
+<br>
+
 <ul>
 
