@@ -15,7 +15,13 @@
 
 <li >Dashboard<br>
 <img src="./readmeFiles/dashboardProductosEscritorio.PNG"alt="Login"/><br>
-<p align="center"><img src="./readmeFiles/dashboardProductosCelular.PNG"alt="Login"/></p><br>En el dashboard podemos encontrar todos los productos creados por los usuarios con su titulo, precio y nombre del creador.
+<p align="center"><img src="./readmeFiles/dashboardProductosCelular.PNG"alt="Login"/></p><br>En el dashboard podemos encontrar todos los productos creados por los usuarios con su título, precio y nombre del creador.
+</li>
+<br>
+
+<li >Ver Producto<br>
+<img src="./readmeFiles/verProductoEscritorio.PNG"alt="Login"/><br>
+<p align="center"><img src="./readmeFiles/verProductoCelular.PNG"alt="Login"/></p><br>En ver producto encontraremos los mismos datos que en el dashboard con la diferencia de no tener límite de longitud en el título al igual que la descripción del producto.
 </li>
 <br>
 
