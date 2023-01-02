@@ -47,7 +47,7 @@
                 required autocomplete="precio"
                 min="1" 
                 step="any"
-                value="{{old('nombre', $producto->precio)}}"
+                value="{{old('precio', $producto->precio)}}"
                 />
 
                 <img

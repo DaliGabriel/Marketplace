@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Productos;
-use App\Models\ordenes;
 use Illuminate\Http\Request;
 
 class ProductosController extends Controller
@@ -49,7 +48,7 @@ class ProductosController extends Controller
         //Guardar tarea en base de datos
         $validated = $request->validate([
             'nombre' => 'required|string|max:255',
-            'descripcion' => 'required|string|max:255',
+            'descripcion' => 'required|string',
             'precio' => 'required',
         ]);
 
@@ -109,7 +108,7 @@ class ProductosController extends Controller
         //Guardar tarea en base de datos
         $validated = $request->validate([
             'nombre' => 'required|string|max:255',
-            'descripcion' => 'required|string|max:255',
+            'descripcion' => 'required|string',
             'precio' => 'required',
         ]);
 

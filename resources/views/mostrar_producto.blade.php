@@ -47,7 +47,7 @@
             <p class="text-body text-sm lg:text-base leading-6 lg:leading-8 dark:text-white">{{$producto->descripcion}}</p>
         
             <div class="mt-4">
-                <div class="flex items-center mt-5"><div class="text-heading font-bold text-base md:text-xl lg:text-2xl 2xl:text-4xl pe-2 md:pe-0 lg:pe-2 2xl:pe-0 dark:text-white">${{number_format($producto->precio)}}</div></div>
+                <div class="flex items-center mt-5"><div class="text-heading font-bold text-base md:text-xl lg:text-2xl 2xl:text-4xl pe-2 md:pe-0 lg:pe-2 2xl:pe-0 dark:text-white">${{number_format($producto->precio, 2)}}</div></div>
             </div>
 
             <a href="/checkout/{{$producto->id}}">
