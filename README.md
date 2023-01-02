@@ -15,7 +15,7 @@
 
 <li >Dashboard<br>
 <img src="./readmeFiles/dashboardProductosEscritorio.PNG"alt="Login"/><br>
-<img style="center" src="./readmeFiles/dashboardProductosCelular.PNG"alt="Login"/><br>En el dashboard podemos encontrar todos los productos creados por los usuarios con su titulo, precio y nombre del creador.
+<p align="center"><img src="./readmeFiles/dashboardProductosCelular.PNG"alt="Login"/></p><br>En el dashboard podemos encontrar todos los productos creados por los usuarios con su titulo, precio y nombre del creador.
 </li>
 <br>
 
