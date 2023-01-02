@@ -25,8 +25,8 @@
 </li>
 <br>
 
-<li >Comprar Producto<br>
-<img src="./readmeFiles/comprarProducto.PNG"alt="Login"/><br>En ver producto encontraremos los mismos datos que en el dashboard con la diferencia de no tener límite de longitud en el título al igual que la descripción del producto.
+<li>Comprar Producto<br>
+<img src="./readmeFiles/comprarProducto.PNG"alt="Login"/><br>En esta seccion se utilizo stripe, como metodo de pago el cual se uso en version de prueba.
 </li>
 <br>
 
