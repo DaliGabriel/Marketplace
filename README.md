@@ -7,4 +7,7 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+<p align="center">Marketplace es una aplicación donde puedes publicar productos y que alguien más los compre</p>
+
+
 
