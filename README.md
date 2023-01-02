@@ -9,5 +9,13 @@
 
 <p align="center">Marketplace es una aplicación donde puedes publicar productos y que alguien más los compre</p>
 
+<h1 align="center">Características</h1>
 
+<ul>
+<li >Login<br>
+<img src="./readmeFiles/login.PNG"alt="Login"/><br>El login esta creado con el paquete de inicio <a href="https://laravel.com/docs/9.x/starter-kits#laravel-breeze" target="_blank">breeze</a>, el cual es proporcionado por <a href="https://laravel.com" target="_blank">laravel.</a><br>
+Se le agrego el enlace de "No tienes cuenta?" con el objetivo de permitir una facil creacion de usuario.
+</li>
+<br>
+<ul>
 

@@ -70,7 +70,7 @@
                     focus-visible:outline-none 
                     focus:outline-none 
                     rounded-md  
-                    bg-black 
+                    bg-slate-900 
                     text-white 
                     px-5 
                     md:px-6 
@@ -79,7 +79,7 @@
                     md:py-3.5 
                     lg:py-4 
                     hover:text-white 
-                    hover:bg-gray-600 
+                    hover:bg-slate-700
                     hover:shadow-cart 
                     w-full 
                     h-10 

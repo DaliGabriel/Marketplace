@@ -29,7 +29,7 @@
                         </div>
 
                         <div class="absolute -bottom-20 group-hover:bottom-1/2 group-hover:translate-y-1/2 right-0 left-0 mx-auto text-center transition-all duration-500">
-                            <a href="/producto/{{$producto->id}}" class="bg-blue-500 hover:bg-dark-700 text-white font-bold py-2 px-4 rounded-full"><i class="fa-solid fa-sack-dollar"></i> Comprar</a>                                
+                            <a href="/producto/{{$producto->id}}" class="bg-slate-900 hover:bg-slate-700 text-white font-bold py-2 px-4 rounded-full"><i class="fa-solid fa-sack-dollar"></i> Comprar</a>                                
                         </div>
 
                     </div>
