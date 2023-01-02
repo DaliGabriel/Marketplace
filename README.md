@@ -26,7 +26,7 @@
 <br>
 
 <li>Comprar Producto<br>
-<img src="./readmeFiles/comprarProducto.PNG"alt="Login"/><br>En esta seccion se utilizo stripe, como metodo de pago el cual se uso en version de prueba.
+<img src="./readmeFiles/comprarProducto.PNG"alt="Login"/><br>Para realizar las compras ase utilizo el sdk de stripe.
 </li>
 <br>
 
