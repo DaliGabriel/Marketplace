@@ -157,6 +157,10 @@ class ProductosController extends Controller
                 'currency' => 'usd',
                 'product_data' => [
                   'name' => $producto->nombre,
+                  'description' => $producto->descripcion,
+                  /*'images' => [
+                    "https://http2.mlstatic.com/D_NQ_NP_733380-MLM48470960434_122021-O.webp"
+                  ],*/
                 ],
                 'unit_amount' => $producto->precio*100,
               ],

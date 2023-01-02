@@ -26,7 +26,7 @@
 <br>
 
 <li>Comprar Producto<br>
-<img src="./readmeFiles/comprarProducto.PNG"alt="Login"/><br>Para realizar las compras ase utilizo el sdk de stripe.
+<img src="./readmeFiles/comprarProducto.PNG"alt="Login"/><br>Para realizar las compras ase utilizo el sdk de <a href="https://stripe.com/docs/payments/accept-a-payment">Stripe</a>.
 </li>
 <br>
 
